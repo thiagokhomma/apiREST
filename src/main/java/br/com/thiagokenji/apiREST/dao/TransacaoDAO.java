@@ -12,4 +12,13 @@ public class TransacaoDAO {
 	
 	List <Transacao> objeto = new ArrayList<>();
 	
+	public Transacao createTransacao (Transacao transacao) {
+		objeto.add(transacao);
+		return objeto.get(0);
+	}
+	
+	public List<Transacao> findTransacoes() {
+		return objeto;
+	}
+
 }
