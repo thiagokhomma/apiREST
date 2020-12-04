@@ -20,5 +20,11 @@ public class TransacaoDAO {
 	public List<Transacao> findTransacoes() {
 		return objeto;
 	}
+	
+	public void deleteTransacoes () {
+		for (Transacao transacao : objeto) {
+			objeto.remove(transacao);
+		}
+	}
 
 }
