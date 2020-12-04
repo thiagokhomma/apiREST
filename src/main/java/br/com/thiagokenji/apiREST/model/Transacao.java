@@ -1,7 +1,7 @@
 package br.com.thiagokenji.apiREST.model;
 
 public class Transacao {
-	private Long id;
+	//private Long id;
 	private  float valor;
 	private String  dataHora;
 	
@@ -10,17 +10,17 @@ public class Transacao {
 	
 	public Transacao(Long id, float valor, String dataHora) {
 		super();
-		this.id = id;
+		//this.id = id;
 		this.valor = valor;
 		this.dataHora = dataHora;
 	}
 	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+	//public Long getId() {
+		//return id;
+	//}
+	//public void setId(Long id) {
+	//	this.id = id;
+	//}
 	public float getValor() {
 		return valor;
 	}

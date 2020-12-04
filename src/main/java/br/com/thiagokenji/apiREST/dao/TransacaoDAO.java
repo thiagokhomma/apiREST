@@ -22,9 +22,7 @@ public class TransacaoDAO {
 	}
 	
 	public void deleteTransacoes () {
-		for (Transacao transacao : objeto) {
-			objeto.remove(transacao);
-		}
+			objeto.clear();
 	}
 
 }
