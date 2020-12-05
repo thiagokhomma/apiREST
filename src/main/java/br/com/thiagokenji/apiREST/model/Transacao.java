@@ -1,14 +1,17 @@
 package br.com.thiagokenji.apiREST.model;
 
+import java.sql.Date;
+import java.time.OffsetDateTime;
+
 public class Transacao {
 	//private Long id;
 	private  float valor;
-	private String  dataHora;
+	private OffsetDateTime  dataHora;
 	
 	
 	public Transacao() {}
 	
-	public Transacao(Long id, float valor, String dataHora) {
+	public Transacao(Long id, float valor, OffsetDateTime dataHora) {
 		super();
 		//this.id = id;
 		this.valor = valor;
@@ -27,10 +30,10 @@ public class Transacao {
 	public void setValor(float valor) {
 		this.valor = valor;
 	}
-	public String getDataHora() {
+	public OffsetDateTime getDataHora() {
 		return dataHora;
 	}
-	public void setDataHora(String dataHora) {
+	public void setDataHora(OffsetDateTime dataHora) {
 		this.dataHora = dataHora;
 	}
 	
