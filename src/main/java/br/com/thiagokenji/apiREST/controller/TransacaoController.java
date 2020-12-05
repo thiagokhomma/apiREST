@@ -24,6 +24,11 @@ public class TransacaoController {
 		return transacaoDAO.createTransacao(transacao);
 	}
 	
+	@GetMapping("/teste")
+	public int testeTransacao() {
+		return transacaoDAO.testeTransacao();
+	}
+	
 	@GetMapping("/todos")
 	public List<Transacao> findAllTransacao() {
 		return transacaoDAO.findTransacoes();
@@ -33,6 +38,12 @@ public class TransacaoController {
 	public void deleteTransacao () {
 		transacaoDAO.deleteTransacoes();
 	}
+	
+	@GetMapping ("/estatistica")
+	public String createEstatistica () {
+		return transacaoDAO.createEstatistica();
+	}
+	 
 }
 	
 
