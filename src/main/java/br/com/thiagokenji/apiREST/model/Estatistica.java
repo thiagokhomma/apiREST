@@ -2,11 +2,11 @@ package br.com.thiagokenji.apiREST.model;
 
 public class Estatistica {
 	private int count;
-	private float sum;
-	private float avg;
-	private float min;
-	private float max;
-	public Estatistica(int count, float sum, float avg, float min, float max) {
+	private double sum;
+	private double avg;
+	private double min;
+	private double max;
+	public Estatistica(int count, double sum, double avg, double min, double max) {
 		super();
 		this.count = count;
 		this.sum = sum;
@@ -23,28 +23,28 @@ public class Estatistica {
 	public void setCount(int count) {
 		this.count = count;
 	}
-	public float getSum() {
+	public double getSum() {
 		return sum;
 	}
-	public void setSum(float sum) {
+	public void setSum(double sum) {
 		this.sum = sum;
 	}
-	public float getAvg() {
+	public double getAvg() {
 		return avg;
 	}
-	public void setAvg(float avg) {
+	public void setAvg(double avg) {
 		this.avg = avg;
 	}
-	public float getMin() {
+	public double getMin() {
 		return min;
 	}
-	public void setMin(float min) {
+	public void setMin(double min) {
 		this.min = min;
 	}
-	public float getMax() {
+	public double getMax() {
 		return max;
 	}
-	public void setMax(float max) {
+	public void setMax(double max) {
 		this.max = max;
 	}
 	

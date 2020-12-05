@@ -1,5 +1,6 @@
 package br.com.thiagokenji.apiREST.controller;
 
+import java.time.OffsetDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,8 @@ public class TransacaoController {
 	}
 	
 	@GetMapping("/teste")
-	public int testeTransacao() {
-		return transacaoDAO.testeTransacao();
+	public OffsetDateTime testeTransacao() {
+		return OffsetDateTime.now();
 	}
 	
 	@GetMapping("/todos")

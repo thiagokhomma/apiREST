@@ -4,20 +4,19 @@ package br.com.thiagokenji.apiREST.dao;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.DoubleSummaryStatistics;
-import java.util.Iterator;
+//import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import br.com.thiagokenji.apiREST.model.Transacao;
-import br.com.thiagokenji.apiREST.model.Estatistica;
+//import br.com.thiagokenji.apiREST.model.Estatistica;
 
 @Service
 public class TransacaoDAO {
 	
 	List <Transacao> objeto = new ArrayList<>();
-	DoubleSummaryStatistics doubleSummaryStatistics = new DoubleSummaryStatistics();
 	
 	public ResponseEntity<Transacao> createTransacao (Transacao transacao) {
 		if (transacao.getValor() < 0 || transacao.getDataHora() == null  ) {
@@ -39,10 +38,12 @@ public class TransacaoDAO {
 	}
 	
 	public String createEstatistica () {
-		//for (int i = 0; i== objeto.size()-1; i++) {
 		int i = 0;
+		DoubleSummaryStatistics doubleSummaryStatistics = new DoubleSummaryStatistics();
 		do {
-		doubleSummaryStatistics.accept(objeto.get(i).getValor());
+			if (objeto.get(i).getDataHora().isAfter(OffsetDateTime.now().minusMinutes(1))) {
+		doubleSummaryStatistics.accept(objeto.get(i).getValor()); 
+			}
 		i++;
 		} while (i < objeto.size());
 		return doubleSummaryStatistics.toString();
