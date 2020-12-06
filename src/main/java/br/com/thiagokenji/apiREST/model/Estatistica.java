@@ -1,12 +1,12 @@
 package br.com.thiagokenji.apiREST.model;
 
 public class Estatistica {
-	private int count;
+	private Long count;
 	private double sum;
 	private double avg;
 	private double min;
 	private double max;
-	public Estatistica(int count, double sum, double avg, double min, double max) {
+	public Estatistica(Long count, double sum, double avg, double min, double max) {
 		super();
 		this.count = count;
 		this.sum = sum;
@@ -17,10 +17,10 @@ public class Estatistica {
 	public Estatistica() {
 		super();
 	}
-	public int getCount() {
+	public Long getCount() {
 		return count;
 	}
-	public void setCount(int count) {
+	public void setCount(Long count) {
 		this.count = count;
 	}
 	public double getSum() {

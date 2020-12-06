@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.thiagokenji.apiREST.dao.TransacaoDAO;
+import br.com.thiagokenji.apiREST.model.Estatistica;
 import br.com.thiagokenji.apiREST.model.Transacao;
 
 @RestController
@@ -41,9 +42,14 @@ public class TransacaoController {
 	}
 	
 	@GetMapping ("/estatistica")
+	public Estatistica createEstatistica (Estatistica estatistica) {
+		return transacaoDAO.createEstatistica(estatistica);
+	}
+	
+	/*@GetMapping ("/estatistica")
 	public String createEstatistica () {
 		return transacaoDAO.createEstatistica();
-	}
+	}*/
 	 
 }
 	
