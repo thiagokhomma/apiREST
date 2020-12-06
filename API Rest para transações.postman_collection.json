@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "d2772935-2962-43fc-b4f3-107b9214bcc7",
+		"name": "API Rest para transações",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/transacao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/transacao",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacao"
+					]
+				},
+				"description": "Endpoint para criar transação"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/transacao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacao"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:8080/transacao",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/transacao",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacao"
+					]
+				},
+				"description": "Endpoint para deletar todas as transações"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/transacao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacao"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:8080/estatistica",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/estatistica",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estatistica"
+					]
+				},
+				"description": "Endpoint para coletar estatísticas de todas as transações de dentro de 60 segs."
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/estatistica",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estatistica"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
