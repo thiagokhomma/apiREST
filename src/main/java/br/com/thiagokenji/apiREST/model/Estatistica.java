@@ -1,5 +1,7 @@
 package br.com.thiagokenji.apiREST.model;
 
+//Criação da classe Estatistica Model para colocar os construtuores, getters e setters.
+
 public class Estatistica {
 	private Long count;
 	private double sum;

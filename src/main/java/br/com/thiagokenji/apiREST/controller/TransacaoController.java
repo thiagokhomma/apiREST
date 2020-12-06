@@ -1,6 +1,6 @@
 package br.com.thiagokenji.apiREST.controller;
 
-import java.time.OffsetDateTime;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,41 +15,32 @@ import br.com.thiagokenji.apiREST.dao.TransacaoDAO;
 import br.com.thiagokenji.apiREST.model.Estatistica;
 import br.com.thiagokenji.apiREST.model.Transacao;
 
-@RestController
+@RestController //Anotation para marcar a classe como um controlador
 public class TransacaoController {
 	
-	@Autowired
+	@Autowired //Anotation usada para marcar o ponto de injeção na classe TransacaoController
 	private TransacaoDAO transacaoDAO;
 	
-	@PostMapping("/transacao")
+	@PostMapping("/transacao") //Anotation usado para mapear a solicitação HTTP POST em /transação
 	public ResponseEntity<Transacao> createTransacao(@RequestBody Transacao transacao) {
 		return transacaoDAO.createTransacao(transacao);
 	}
 	
-	@GetMapping("/teste")
-	public OffsetDateTime testeTransacao() {
-		return OffsetDateTime.now();
-	}
-	
-	@GetMapping("/todos")
+	@GetMapping("/todos") //Transação para solicitação http GET para receber a lista de todas as transações
 	public List<Transacao> findAllTransacao() {
 		return transacaoDAO.findTransacoes();
 	}
 	
-	@DeleteMapping("/transacao")
+	@DeleteMapping("/transacao") //Anotation para solicitações http Delete em /transacao para apagar todas as transações
 	public void deleteTransacao () {
 		transacaoDAO.deleteTransacoes();
 	}
 	
-	@GetMapping ("/estatistica")
+	@GetMapping ("/estatistica") //Anotation para solicitação http GET em /estatisca para calcular e receber as estaticas das transações de 1 min atrás
 	public Estatistica createEstatistica (Estatistica estatistica) {
 		return transacaoDAO.createEstatistica(estatistica);
 	}
 	
-	/*@GetMapping ("/estatistica")
-	public String createEstatistica () {
-		return transacaoDAO.createEstatistica();
-	}*/
 	 
 }
 	
